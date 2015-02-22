@@ -1,6 +1,6 @@
 {
   "name": "grunt-moe-handlebars",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "grunt-moe-handlebars",
   "main": "tasks/moe-handlebars.js",
   "scripts": {
@@ -33,7 +33,6 @@
     "time-grunt": "^1.0.0"
   },
   "dependencies": {
-    "handlebars": "^3.0.0",
-    "lodash": "^3.3.0"
+    "handlebars": "^3.0.0"
   }
 }
