@@ -1,6 +1,6 @@
 {
   "name": "grunt-moe-handlebars",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "grunt-moe-handlebars",
   "main": "tasks/moe-handlebars.js",
   "scripts": {
