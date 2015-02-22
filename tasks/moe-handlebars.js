@@ -10,8 +10,9 @@ module.exports = function (grunt) {
       compilerOptions: {}
     });
 
-    var isPartialRegex = /ptl.html$/;
+    var isPartialRegex = /tpl.html$/;
     var partials = {};
+    var fileCount = 0;
 
     var processFile = function (abspath) {
       var context = {};
@@ -35,9 +36,11 @@ module.exports = function (grunt) {
         subdir = subdir || '.';
         var relpath = path.join(subdir, filename);
         partials[relpath] = partial;
-        partials[relpath.replace('\\', '/')] = partial;
         partials[relpath.substr(0, relpath.length - 9)] = partial;
+        partials[relpath.replace('\\', '/')] = partial;
         partials[relpath.replace('\\', '/').substr(0, relpath.length - 9)] = partial;
+        partials[relpath.replace('\\', '-')] = partial;
+        partials[relpath.replace('\\', '-').substr(0, relpath.length - 9)] = partial;
       }
     });
 
@@ -58,8 +61,13 @@ module.exports = function (grunt) {
           grunt.file.write(f.dest, html, {
             encoding: 'utf8'
           });
+          grunt.log.writeln(f.dest + ' generated.');
+          fileCount++;
         }
       });
     });
+
+    var msg = ['>> ' + fileCount, fileCount === 1 ? 'file' : 'files', 'generated.'].join(' ');
+    grunt.log.writeln(msg);
   });
 };
