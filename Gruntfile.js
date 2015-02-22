@@ -73,7 +73,6 @@ module.exports = function (grunt) {
     mhandlebars: {
       options: {
         partialsDir: 'test/partials/',
-        isPartialRegex: /ptl.html$/,
         compilerOptions: {}
       },
       test: {
