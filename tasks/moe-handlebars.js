@@ -39,8 +39,10 @@ module.exports = function (grunt) {
         partials[relpath.substr(0, relpath.length - 9)] = partial;
         partials[relpath.replace('\\', '/')] = partial;
         partials[relpath.replace('\\', '/').substr(0, relpath.length - 9)] = partial;
-        partials[relpath.replace('\\', '-')] = partial;
-        partials[relpath.replace('\\', '-').substr(0, relpath.length - 9)] = partial;
+        partials[relpath.replace('/', '\\')] = partial;
+        partials[relpath.replace('/', '\\').substr(0, relpath.length - 9)] = partial;
+        partials[relpath.replace('\\', '-').replace('/', '-')] = partial;
+        partials[relpath.replace('\\', '-').replace('/', '-').substr(0, relpath.length - 9)] = partial;
       }
     });
 
