@@ -79,15 +79,3 @@ mhandlebars: {
       }
     }
 ```
-
-## Contributing
-In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
-
-## Release History
-* 2015-02-22 &emsp; v0.0.1 &emsp; Change version number.
-* 2015-02-22 &emsp; v0.0.2 &emsp; Add a dependency.
-* 2015-02-22 &emsp; v0.1.0 &emsp; Delete an option.
-* 2015-02-22 &emsp; v0.1.1 &emsp; Add different operating systems' support to directory's format.
-* 2015-02-22 &emsp; v0.1.2 &emsp; Add models of html and html.json.  
-* 2015-02-25 &emsp; v0.1.3 &emsp; Add default command to release command.
-* 2015-03-18 &emsp; v0.1.4 &emsp; Change version number.
